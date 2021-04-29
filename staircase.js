@@ -12,9 +12,11 @@
 const staircase = (n) =>{
   let output = '';
   for (let i = 1; i<=n; i++){
+    //for spaces
     for (let spaces=n-1; spaces>=i; spaces--){
       output+=" ";
     }
+    //for #
     for (let j=1; j<=i; j++){
       output+="#";
     }
