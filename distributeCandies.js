@@ -8,10 +8,7 @@ const removeRepetitiveElements = (candyType) => {
     return acc;
   }, {});
   const arr = Object.keys(result);
-  const res = [];
-  for (let i = 0; i < arr.length; i++) {
-    res.push(Number(arr[i]));
-  }
+  const res = arr.map((element) => Number(element));
   return res;
 };
 const distributeCandies = (candyType) => {
