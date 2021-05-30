@@ -4,15 +4,16 @@
 
 // group([6.5, 4.2, 6.3], Math.floor);
 // { '4': [4.2], '6': [6.5, 6.3] }
+
 const group = (collection, grouper) => {
-  const result = {};
-  collection.reduce((acc, cv) => {
-    if (result[grouper(cv)]) {
-      result[grouper(cv)].push(cv);
+  const result = collection.reduce((acc, curr) => {
+    if (acc[grouper(curr)]) {
+      acc[grouper(curr)].push(curr);
     } else {
-      result[grouper(cv)] = [cv];
+      acc[grouper(curr)] = [curr];
     }
-  }, result);
+    return acc;
+  }, {});
   return result;
 };
 console.log(group([6.5, 4.2, 6.3], Math.floor));
