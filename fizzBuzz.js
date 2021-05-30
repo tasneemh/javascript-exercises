@@ -5,9 +5,16 @@
  * if i is the multiple of 5 print Buzz
  * if i is not the multiple of 3 or 5 print the value of i
  */
-const fizzBuzz = (n) =>{
-  for (let i = 1; i <= n; i++){
-    (i%3 === 0 && i%5 === 0) ? console.log("FizzBuzz") : (i%3 === 0) ? console.log("Fizz") : (i%5 === 0) ? console.log("Buzz") : console.log(i);
+
+const fizzBuzz = (n) => {
+  for (let i = 1; i <= n; i++) {
+    i % 3 === 0 && i % 5 === 0
+      ? console.log("FizzBuzz")
+      : i % 3 === 0
+      ? console.log("Fizz")
+      : i % 5 === 0
+      ? console.log("Buzz")
+      : console.log(i);
   }
 };
-(fizzBuzz(15));
+fizzBuzz(15);

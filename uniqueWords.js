@@ -1,13 +1,14 @@
 //Count the number of unique words in a sentence
-
-const uniqueWords = (s, word) => {
-  for (let i = 0; i < s.length; i++) {
-    console.log(s[i]);
-  }
-  let count = 0;
-  if (s.includes(word)) {
-    count++;
-  }
-  console.log("count: ", count);
+const uniqueWords = (s) => {
+  const arr = s.split(" ");
+  const count = arr.reduce((acc, curr) => {
+    if (acc[curr]) {
+      acc[curr] += 1;
+    } else {
+      acc[curr] = 1;
+    }
+    return acc;
+  }, {});
+  return count;
 };
-uniqueWords("length ng", "ng");
+console.log(uniqueWords("Hello World World"));
