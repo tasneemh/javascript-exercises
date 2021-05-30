@@ -1,4 +1,4 @@
-// In JavaScript or Python, define a function `foo` which accepts a Python list or JavaScript array of integers and returns a new list where elements with an even index are incremented by 1 and elements with an odd index are decremented by 1. Assume 0 is an even number.
+// In JavaScript, define a function `foo` which accepts a JavaScript array of integers and returns a new list where elements with an even index are incremented by 1 and elements with an odd index are decremented by 1. Assume 0 is an even number.
 // e.g. foo([10, 10, 10, 10, 10]) => [11, 9, 11, 9, 11]
 
 const foo = (arr) => {
