@@ -1,20 +1,20 @@
-const containsDuplicate = (arr) => {
+const containsDuplicate = (nums) => {
   const result = {};
   let bool = false;
-  for (let i = 0; i < arr.length; i++) {
-    if (result[arr[i]]) {
-      result[arr[i]]++;
+  for (let i = 0; i < nums.length; i++) {
+    if (result[nums[i]]) {
+      result[nums[i]]++;
     } else {
-      result[arr[i]] = 1;
+      result[nums[i]] = 1;
     }
   }
-  const arr2 = Object.values(result);
-  for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i] > 1) {
+  const nums2 = Object.values(result);
+  for (let i = 0; i < nums2.length; i++) {
+    if (nums2[i] > 1) {
       bool = true;
     }
   }
-  if (bool === true) {
+  if (bool) {
     return true;
   } else {
     return false;
