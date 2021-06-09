@@ -1,6 +1,6 @@
 const fruitSalad = (fruits) => {
   const arr = [];
-  for (let i = 0; i < fruits.length; i++) {git add 
+  for (let i = 0; i < fruits.length; i++) {
     arr.push(fruits[i].substring(0, fruits[i].length / 2));
     arr.push(fruits[i].substring(fruits[i].length / 2));
   }
