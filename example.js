@@ -1,16 +1,13 @@
-const pickNumbers = (s) => {
-  const arr = s.split("");
+const extractUnique = (arr) => {
   const arr2 = [];
   for (let i = 0; i < arr.length; i++) {
-    console.log(typeof Number(arr[i]));
-    console.log(Number(arr[i]));
-    if (!isNaN(Number(arr[i]))) {
-      arr2.push(Number(arr[i]));
+    if (!arr2.includes(arr[i])) {
+      arr2.push(arr[i]);
     }
   }
-  console.log(arr2.join(""));
+  return arr2;
 };
-pickNumbers("sfsd8fsdf6dsfsd8sdfs28fd0");
+console.log(extractUnique([1, 1, 2, 2, 3, 4, 4, 5]));
 /*
 (function () {
   function foo(x) {
